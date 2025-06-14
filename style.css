@@ -98,7 +98,7 @@ body {
     position: absolute;
     top: 70px;
     width: 100%;
-    background: rgba(255, 244, 239, 0.95);
+    background: transparent;
     z-index: 1000;
     padding: 0 50px;
 }
@@ -124,7 +124,7 @@ body {
 }
 
 .nav-cta {
-    background:var(--gradient-accent);
+    background: var(--gradient-accent);
     color: var(--white);
     border: none;
     padding: 14px 32px;
@@ -220,8 +220,8 @@ body {
     color: var(--white);
     padding: 8px 16px;
     border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 300;
     margin-bottom: 24px;
     box-shadow: var(--shadow-soft);
     animation: bounceIn 1.2s ease-out
@@ -233,7 +233,7 @@ body {
 
 .hero-title {
     font-family: 'Alata', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3.5rem, 5vw, 4rem);
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 24px;
@@ -277,7 +277,8 @@ body {
     min-height: 80px;
 }
 
-.primary-cta:hover {
+.primary-cta:hover,
+.nav-cta:hover {
     box-shadow: 0 25px 50px rgba(255, 107, 53, 0.6)
 }
 
@@ -297,7 +298,7 @@ body {
 .cta-text {
     display: block;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 4px;
     letter-spacing: 0.5px
 }
@@ -476,7 +477,6 @@ body {
     border-radius: 15px;
     font-size: 11px;
     font-weight: 800;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4)
 }
@@ -669,7 +669,7 @@ body {
     width: 120px;
 }
 
-.trust-logo-img.fssai-logo-img{
+.trust-logo-img.fssai-logo-img {
     width: 100%;
     height: 60%;
 }
@@ -748,7 +748,7 @@ body {
     line-height: 1.6
 }
 
-.urgency-content > .primary-cta{
+.urgency-content>.primary-cta {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
 }
 
@@ -1086,6 +1086,10 @@ body {
 }
 
 @media (max-width:968px) {
+    .hero-section {
+        margin-top: 160px;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 60px;
@@ -1126,9 +1130,10 @@ body {
 }
 
 @media (max-width:768px) {
-    .nav-logo h1 {
+    .nav-logo span {
         font-size: 1.6rem;
     }
+
     .nav-cta {
         font-size: .9rem;
         padding: 10px 20px;
@@ -1151,11 +1156,7 @@ body {
 
     .navbar {
         top: 50px;
-        padding: 10px 0
-    }
-
-    .hero-section {
-        margin-top: 120px
+        padding: 10px 0;
     }
 
     .hero-container {
@@ -1164,8 +1165,9 @@ body {
     }
 
     .hero-section {
+        margin-top: 120px;
         min-height: 90vh;
-        padding: 40px 0
+        padding: 40px 0;
     }
 
     .value-boxes {
@@ -1198,16 +1200,24 @@ body {
 }
 
 @media (max-width:480px) {
+    .hero-section {
+        margin-top: 80px;
+    }
+
     .hero-container {
         padding: 0 16px
     }
 
     .hero-title {
-        font-size: clamp(1.8rem, 6vw, 2.5rem)
+        font-size: clamp(2rem, 6vw, 2.5rem)
+    }
+
+    .hero-badge {
+        font-size: 12px;
     }
 
     .hero-description {
-        font-size: 16px
+        font-size: 12px
     }
 
     .primary-cta {
