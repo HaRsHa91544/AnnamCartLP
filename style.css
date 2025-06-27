@@ -128,7 +128,7 @@ body {
     color: var(--white);
     border: none;
     padding: 14px 32px;
-    border-radius: 7px;
+    border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -232,14 +232,15 @@ body {
 
 .hero-title {
     font-family: 'Alata', serif;
-    font-size: clamp(3.5rem, 5vw, 4rem);
-    font-weight: 600;
+    font-size: clamp(3.5rem, 5vw, 3.9rem);
+    font-weight: 700;
     line-height: 1.4;
     margin-bottom: 24px;
     color: var(--brown)
 }
 
 .highlight-text {
+    font-size: 4.65rem;
     font-weight: 900;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
@@ -267,7 +268,7 @@ body {
     color: var(--white);
     border: none;
     padding: 0;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -297,7 +298,7 @@ body {
 
 .cta-text {
     display: block;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     margin-bottom: 4px;
     letter-spacing: 0.5px
@@ -305,7 +306,7 @@ body {
 
 .cta-subtext {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     opacity: 0.9;
     font-weight: 300;
 }
@@ -360,6 +361,7 @@ body {
     background: var(--white);
     padding: 24px;
     border-radius: 20px;
+    border: 1.5px dashed var(--brown);
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -736,6 +738,7 @@ body {
 }
 
 .urgency-banner h2 {
+    font-weight: 300;
     font-family: 'Alata', serif;
     font-size: clamp(2rem, 4vw, 3.5rem);
     margin-bottom: 20px
@@ -1135,7 +1138,7 @@ body {
     }
 
     .nav-cta {
-        font-size: .9rem;
+        font-size: 1rem;
         padding: 10px 20px;
     }
 
@@ -1200,8 +1203,12 @@ body {
 }
 
 @media (max-width:480px) {
+    .highlight-text {
+        font-size:  clamp(2.4rem, 6vw, 3rem);
+    }
+
     .hero-section {
-        margin-top: 80px;
+        margin-top: 90px;
     }
 
     .hero-container {
@@ -1209,18 +1216,20 @@ body {
     }
 
     .hero-title {
-        font-size: clamp(2.2rem, 6vw, 2.5rem)
+        font-size: clamp(2.1rem, 6vw, 2.4rem)
     }
 
     .hero-badge {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .hero-description {
-        font-size: 13px
+        margin-top: 20px;
+        font-size: 13px;
     }
 
     .primary-cta {
+        margin-top: 10px;
         min-height: 70px
     }
 
@@ -1229,7 +1238,11 @@ body {
     }
 
     .cta-text {
-        font-size: 16px
+        font-size: 19px
+    }
+
+    .value-box:nth-child(1) {
+        margin-top: 30px;
     }
 
     .value-box {
